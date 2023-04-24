@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaTimes, FaBars } from "react-icons/fa";
-import logo from "../assets/logo1.png";
+import logo from "../assets/logo.png";
+import real from "../assets/888.png";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -13,8 +14,13 @@ const Navbar = () => {
         <img src={logo} alt="" />
       </div>
       <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
-        <li>Home</li>
-        <li>About Us</li>
+        <li>Kryefaqja</li>
+        <li>
+          <div className="nav-item">
+            <span>4REALESTATE</span>
+            <img src={real} alt="" />
+          </div>
+        </li>
         <li>Contact Us</li>
         <li>Testimonials</li>
       </ul>
@@ -36,7 +42,7 @@ const Container = styled.div`
   position: fixed;
   overflow-x: hidden;
   width: 100%;
-  background-color: #ff6000;
+  background-color: #283739;
   overflow: visible;
   z-index: 10;
   backdrop-filter: blur(20px);
@@ -83,13 +89,28 @@ const Container = styled.div`
     user-select: none;
     display: none;
   }
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item span {
+    margin-right: 10px;
+    font-weight: 500;
+  }
+
+  .nav-item img {
+    width: 20px;
+    height: 20px;
+  }
+
   @media (max-width: 750px) {
     .mobile-menu {
-      color: #ff6000;
+      color: white;
       display: block;
     }
     .nav-menu {
-      background-color: var(--backgroundColor);
+      background-color: #283739;
       width: 50%;
       height: 50vh;
       flex-direction: column;
@@ -103,7 +124,7 @@ const Container = styled.div`
       user-select: none;
       transition: 0.4s ease;
       li {
-        color: #ff6000;
+        color: white;
 
         font-size: 17px;
       }
