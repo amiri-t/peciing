@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FaTimes, FaBars } from "react-icons/fa";
-import logo from "../assets/logo1.png";
+import { FaTimes, FaBars, FaFacebook, FaInstagram  } from "react-icons/fa";
+import logo from "../assets/logo.png";
 import real from "../assets/888.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -10,20 +11,30 @@ const Navbar = () => {
   const [activeTab, setActiveTab] = useState("home");
   return (
     <Container>
-      <div className="logo">
-        <img src={logo} alt="" />
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
+      </Link>
       <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>
-          <div className="nav-item">
-            <span>4RealEstate</span>
-            <img src={real} alt="" />
-          </div>
-        </li>
-        <li>Testimonials</li>
+        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <li>Kryefaqja</li>
+        </Link>
+        <Link
+          to="/4erealestate"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <li>
+            <div className="nav-item">
+              <span>4ERealEstate</span>
+              <img src={real} alt="" />
+            </div>
+          </li>
+        </Link>
+        <Link to="/rrethnesh"style={{ textDecoration: "none", color: "white" }} >
+        <li>Rreth nesh</li>
+        </Link>
+        <li>Kontakti</li>
       </ul>
       <div className="mobile-menu" onClick={handleToggleMenu}>
         {toggleMenu ? <FaTimes /> : <FaBars />}
@@ -37,7 +48,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 3em;
+  padding: 1em 10em;
   height: 70px;
   top: 0;
   position: fixed;
@@ -45,7 +56,7 @@ const Container = styled.div`
   width: 100%;
   overflow: visible;
   z-index: 10;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(70px);
   box-shadow: 0 3px 10px -2px gray;
   transition: 0.3s;
   .logo {
