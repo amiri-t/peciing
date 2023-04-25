@@ -22,3 +22,7 @@ body {
   --fontSecondaryColor: #7e7d7d;
   --orangeGradient: linear-gradient(315deg, #e9906a 70%, #e96e26 74%);
 }
+.link-class {
+  text-decoration: none;
+  color: white;
+}

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaTimes, FaBars } from "react-icons/fa";
-import logo from "../assets/logo1.png";
+import logo from "../assets/logo.png";
 import real from "../assets/888.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -10,19 +11,23 @@ const Navbar = () => {
   const [activeTab, setActiveTab] = useState("home");
   return (
     <Container>
-      <div className="logo">
-        <img src={logo} alt="" />
-      </div>
+      <Link to={"/"}>
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
+      </Link>
       <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
         <li>Home</li>
         <li>About Us</li>
         <li>Contact Us</li>
-        <li>
-          <div className="nav-item">
-            <span>4RealEstate</span>
-            <img src={real} alt="" />
-          </div>
-        </li>
+        <Link to={"/4realestate"} className="link-class">
+          <li>
+            <div className="nav-item">
+              <span>4RealEstate</span>
+              <img src={real} alt="" />
+            </div>
+          </li>
+        </Link>
         <li>Testimonials</li>
       </ul>
       <div className="mobile-menu" onClick={handleToggleMenu}>
@@ -45,7 +50,7 @@ const Container = styled.div`
   width: 100%;
   overflow: visible;
   z-index: 10;
-  backdrop-filter: blur(20px);
+  background-color: #283739;
   box-shadow: 0 3px 10px -2px gray;
   transition: 0.3s;
   .logo {
