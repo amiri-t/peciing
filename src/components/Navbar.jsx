@@ -17,6 +17,7 @@ const Navbar = () => {
         </div>
       </Link>
       <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
+
         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
           <li>Kryefaqja</li>
         </Link>
@@ -31,6 +32,7 @@ const Navbar = () => {
             </div>
           </li>
         </Link>
+
         <Link to="/rrethnesh"style={{ textDecoration: "none", color: "white" }} >
         <li>Rreth nesh</li>
         </Link>
@@ -57,6 +59,7 @@ const Container = styled.div`
   overflow: visible;
   z-index: 10;
   backdrop-filter: blur(70px);
+  background-color: #283739;
   box-shadow: 0 3px 10px -2px gray;
   transition: 0.3s;
   .logo {
