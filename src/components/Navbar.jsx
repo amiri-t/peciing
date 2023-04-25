@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes, FaBars, FaFacebook, FaInstagram  } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import real from "../assets/888.png";
 import { Link } from "react-router-dom";
@@ -11,24 +11,32 @@ const Navbar = () => {
   const [activeTab, setActiveTab] = useState("home");
   return (
     <Container>
-      <Link to={"/"}>
+      <Link to="/">
         <div className="logo">
           <img src={logo} alt="" />
         </div>
       </Link>
       <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <Link to={"/4realestate"} className="link-class">
+
+        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <li>Kryefaqja</li>
+        </Link>
+        <Link
+          to="/4erealestate"
+          style={{ textDecoration: "none", color: "white" }}
+        >
           <li>
             <div className="nav-item">
-              <span>4RealEstate</span>
+              <span>4ERealEstate</span>
               <img src={real} alt="" />
             </div>
           </li>
         </Link>
-        <li>Testimonials</li>
+
+        <Link to="/rrethnesh"style={{ textDecoration: "none", color: "white" }} >
+        <li>Rreth nesh</li>
+        </Link>
+        <li>Kontakti</li>
       </ul>
       <div className="mobile-menu" onClick={handleToggleMenu}>
         {toggleMenu ? <FaTimes /> : <FaBars />}
@@ -42,7 +50,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 3em;
+  padding: 1em 10em;
   height: 70px;
   top: 0;
   position: fixed;
@@ -50,6 +58,7 @@ const Container = styled.div`
   width: 100%;
   overflow: visible;
   z-index: 10;
+  backdrop-filter: blur(70px);
   background-color: #283739;
   box-shadow: 0 3px 10px -2px gray;
   transition: 0.3s;
