@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FaTimes, FaBars, FaFacebook, FaInstagram  } from "react-icons/fa";
+import { FaTimes, FaBars, FaFacebook, FaInstagram } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import real from "../assets/888.png";
 import { Link } from "react-router-dom";
@@ -17,14 +17,10 @@ const Navbar = () => {
         </div>
       </Link>
       <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
-
         <Link to="/" style={{ textDecoration: "none", color: "white" }}>
           <li>Kryefaqja</li>
         </Link>
-        <Link
-          to="/4erealestate"
-          style={{ textDecoration: "none", color: "white" }}
-        >
+        <Link to="/4realestate" className="link-class">
           <li>
             <div className="nav-item">
               <span>4ERealEstate</span>
@@ -33,10 +29,15 @@ const Navbar = () => {
           </li>
         </Link>
 
-        <Link to="/rrethnesh"style={{ textDecoration: "none", color: "white" }} >
-        <li>Rreth nesh</li>
+        <Link
+          to="/rrethnesh"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <li>Rreth nesh</li>
         </Link>
-        <li>Kontakti</li>
+        <Link to={"/kontakti"} className="link-class">
+          <li>Kontakti</li>
+        </Link>
       </ul>
       <div className="mobile-menu" onClick={handleToggleMenu}>
         {toggleMenu ? <FaTimes /> : <FaBars />}
