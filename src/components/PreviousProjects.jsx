@@ -104,6 +104,7 @@ const Container = styled.div`
         padding: 10px 14px;
         background-color: #283739;
         color: white;
+        border: none;
       }
     }
   }

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Hero from "../components/Hero";
 import PreviousProjects from "../components/PreviousProjects";
 import CurrentProject from "../components/CurrentProject";
+import OurServices from "../components/OurServices";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <CurrentProject />
       <PreviousProjects />
+      <OurServices />
     </Container>
   );
 };
