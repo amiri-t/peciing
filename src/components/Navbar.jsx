@@ -51,7 +51,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 10em;
+  padding: 1em 3%;
   height: 70px;
   top: 0;
   position: fixed;

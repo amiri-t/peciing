@@ -183,6 +183,11 @@ const Container = styled.div`
     }
   }
   @media (max-width: 550px) {
+    .container {
+      form {
+        padding: 0 4%;
+      }
+    }
   }
 `;
 

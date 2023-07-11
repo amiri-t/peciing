@@ -16,7 +16,6 @@ const Background = styled.div`
 const AboutUsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 2rem;
 
@@ -39,12 +38,6 @@ const SectionContainer = styled.div`
   color: white;
   backdrop-filter: blur(10px);
   transition: all 0.2s ease-in-out;
-  transform: scale(1);
-
-  &:hover {
-    transform: scale(1.02);
-    backdrop-filter: blur(5px);
-  }
   @media (min-width: 768px) {
     flex-basis: 45%;
     margin-bottom: 0;
@@ -52,8 +45,8 @@ const SectionContainer = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   margin-bottom: 1rem;
 
   img {
@@ -65,8 +58,8 @@ const ImageContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 130px;
+    height: 130px;
     margin-bottom: 2rem;
   }
 `;
@@ -94,15 +87,13 @@ const InstagramIcon = styled(FaInstagram)`
 `;
 const TextContainer = styled.div`
   text-align: center;
-
+  h2 {
+    padding: 1em 0;
+  }
   p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    text-align: left;
   }
 `;
 
@@ -128,10 +119,27 @@ const AboutUs = () => {
             </IconContainer>
             <h2>4E Real Estate</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
-              enim maximus, molestie nunc id, tincidunt lorem. Donec bibendum,
-              libero in venenatis vehicula, nisi leo luctus nisi, sit amet
-              aliquam est nulla eget risus.
+              Prezantimi i agjencisë sonë kryesore të pasurive të paluajtshme:
+              Çelësi juaj për shtëpitë e ëndrrave! Në [Emri juaj i agjencisë],
+              ne krenohemi që jemi partneri juaj i besuar në udhëtimin
+              emocionues të blerjes, shitjes ose marrjes me qira të pronave të
+              patundshmërive. Me angazhimin tonë të palëkundur ndaj përsosmërisë
+              dhe njohurive të gjera të industrisë, ne shkojmë më lart dhe
+              përtej për t'ju ndihmuar të gjeni shtëpinë tuaj të përsosur ose
+              mundësinë e investimit. Pse të zgjidhni [Emri juaj i agjencisë]?1.
+              Shërbimi i personalizuar: Ne besojmë në krijimin e marrëdhënieve
+              të forta me klientët tanë. Ekipi ynë i përkushtuar i
+              profesionistëve me përvojë të pasurive të paluajtshme merr kohë
+              për të kuptuar nevojat, preferencat dhe qëllimet tuaja unike. Nga
+              blerësit e shtëpive për herë të parë te investitorët me përvojë,
+              ne përshtatim qasjen tonë për të siguruar një përvojë të qetë dhe
+              të kënaqshme.2. Portofoli i gjerë i pronave: Me një rrjet të gjerë
+              dhe akses në një gamë të gjerë pronash, ne ofrojmë një portofol
+              mbresëlënës për t'u kujdesur për buxhete dhe stile jetese të
+              ndryshme. Nëse jeni duke kërkuar për një apartament komod, një
+              shtëpi familjare periferike ose një pronë luksoze, ne ju presim
+              ndeshjen perfekte.3. Ekspertiza e tregut: Tregu i pasurive të
+              paluajtshme mund të jetë kompleks dhe vazhdimisht në ndryshim.
             </p>
           </TextContainer>
         </SectionContainer>
@@ -154,10 +162,32 @@ const AboutUs = () => {
             </IconContainer>
             <h2>Peci-ing</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
-              enim maximus, molestie nunc id, tincidunt lorem. Donec bibendum,
-              libero in venenatis vehicula, nisi leo luctus nisi, sit amet
-              aliquam est nulla eget risus.
+              Jini të sigurt, ekipi ynë qëndron përpara lojës me njohuri dhe
+              tendenca të përditësuara të tregut. Ne ofrojmë udhëzime të
+              vlefshme, duke ju ndihmuar të merrni vendime të informuara dhe
+              duke maksimizuar potencialin tuaj të investimit.4. Transaksionet
+              pa probleme: Lundrimi në dokumentet dhe ligjshmëritë e
+              transaksioneve të pasurive të paluajtshme mund të jetë i frikshëm.
+              Vëmendja jonë e përpiktë ndaj detajeve siguron një proces të
+              pandërprerë nga fillimi në fund. Ne trajtojmë negociatat,
+              kontratat dhe ndërlikimet e tjera, duke ju siguruar paqe mendore
+              gjatë gjithë kohës.5. Rrjeti i besuar: Gjatë viteve, ne kemi
+              ndërtuar marrëdhënie të forta me profesionistë të industrisë, duke
+              përfshirë agjentët e hipotekave, inspektorët dhe avokatët. Ne ju
+              lidhim me rrjetin tonë të besuar, duke u siguruar që të gjitha
+              aspektet e udhëtimit tuaj me pasuri të paluajtshme të trajtohen me
+              profesionalizmin maksimal.6. Kënaqësia e klientit: Qëllimi ynë
+              përfundimtar është kënaqësia juaj e plotë. Ne matim suksesin tonë
+              jo vetëm nga numri i transaksioneve, por edhe nga buzëqeshjet në
+              fytyrat e klientëve tanë. Ne jemi të përkushtuar për të tejkaluar
+              pritshmëritë tuaja dhe për t'i bërë ëndrrat tuaja të pasurive të
+              paluajtshme realitet. Jeni gati për të nisur një udhëtim të
+              jashtëzakonshëm të pasurive të paluajtshme? Na kontaktoni në [Emri
+              juaj i agjencisë] sot. Le të hapim dyert e shtëpisë tuaj të
+              ëndrrave dhe t'ju udhëheqim drejt një të ardhmeje të begatë në
+              pasuri të paluajtshme! Mos harroni, në [Emri juaj i agjencisë], ne
+              nuk shesim vetëm shtëpi; ne ndërtojmë marrëdhënie dhe i bëjmë
+              ëndrrat realitet.
             </p>
           </TextContainer>
         </SectionContainer>
