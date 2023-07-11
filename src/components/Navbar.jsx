@@ -95,16 +95,6 @@ const Container = styled.div`
         }
       }
     }
-    .active {
-      background: var(--gradientBackground);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
-    }
-    .nonActive {
-      color: var(--fontPrimaryColor);
-      font-weight: 300;
-    }
   }
   .mobile-menu {
     position: absolute;

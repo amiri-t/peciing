@@ -105,6 +105,11 @@ const Container = styled.div`
         background-color: #283739;
         color: white;
         border: none;
+        transition: 0.4s;
+        cursor: pointer;
+        :hover {
+          transform: scale(1.04);
+        }
       }
     }
   }
